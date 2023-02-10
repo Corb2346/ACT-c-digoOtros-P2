@@ -1,8 +1,8 @@
-var formulario = document.querySelector("#form")
+var formulario = document.querySelector(".formulario")//para llamar a form se usa la clase .fomulario Se quitó (#form)
 
-formulario.onsubmit = function(e) {
+formulario.onsubmit = function() {//se quitó el e de parámetro
 
-  e.prevent();
+  //e.prevent(); //se quitó el e.prevent 
   
   var n = formulario.elements[0]
   var e = formulario.elements[1]
@@ -52,10 +52,10 @@ function agregarInvitado(nombre, edad, nacionalidad) {
     nacionalidad = "Peruana"
   }
 
-var lista = document.getElementById("lista-de-invitados")
+var lista = document.getElementById("lista-de-invitados")//Se gregó el # para referirse al id
 
 var elementoLista = document.createElement("div")
-elementoLista.classList.added("elemento-lista")
+elementoLista.classList.add("elemento-lista") //se eliminó el added por add
 lista.appendChild(elementoLista)
 
 var spanNombre = document.createElement("span")
